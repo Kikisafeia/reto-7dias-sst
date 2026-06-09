@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Día 6 – Ley Karin: Protocolo con IA</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f5f5; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1abc9c; padding-bottom: 10px; }
+  h2 { color: #1a5276; margin-top: 30px; }
+  .card { background: white; border-radius: 8px; padding: 20px; margin: 20px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+  .badge { background: #1abc9c; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85em; font-weight: bold; }
+  .objetivo { background: #eaf4fb; border-left: 4px solid #2980b9; padding: 15px; margin: 15px 0; border-radius: 4px; }
+  ul, ol { padding-left: 20px; }
+  li { margin: 8px 0; }
+  .prompt-box { background: #1a1a2e; color: #e0e0e0; padding: 20px; border-radius: 8px; font-family: monospace; font-size: 0.9em; white-space: pre-wrap; line-height: 1.6; }
+  .copy-btn { background: #1abc9c; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-top: 10px; font-size: 0.9em; }
+  .copy-btn:hover { background: #16a085; }
+  .checklist { list-style: none; padding: 0; }
+  .checklist li::before { content: "☐ "; color: #27ae60; font-weight: bold; }
+  .alerta { background: #fef9e7; border-left: 4px solid #f39c12; padding: 15px; border-radius: 4px; margin: 10px 0; }
+  .conducta { background: #eafaf1; border-left: 4px solid #1abc9c; padding: 12px; border-radius: 4px; margin: 8px 0; }
+  .plazo { background: #fdf2f8; border: 1px solid #1abc9c; border-radius: 6px; padding: 12px; margin: 8px 0; text-align: center; }
+  nav.nav { background: #1a5276; padding: 15px; border-radius: 8px; margin-top: 40px; display: flex; gap: 10px; flex-wrap: wrap; }
+  nav.nav a { color: white; text-decoration: none; padding: 6px 14px; border-radius: 4px; background: rgba(255,255,255,0.15); font-size: 0.9em; }
+  nav.nav a.active { background: #1abc9c; }
+  nav.nav a:hover { background: rgba(255,255,255,0.3); }
+</style>
+</head>
+<body>
+<div class="card">
+  <span class="badge">DÍA 6 DE 7</span>
+  <h1>⚖️ Ley Karin: Protocolo con IA</h1>
+  <div class="objetivo">
+    <strong>Objetivo del día:</strong> Entender las obligaciones de la Ley Karin (Ley 21.643) y usar IA para crear protocolos, formularios y comunicaciones que cumplan con esta normativa chilena sobre acoso laboral y sexual.
+  </div>
+</div>
+
+<div class="card">
+  <h2>📌 ¿Qué exige la Ley Karin?</h2>
+  <div class="alerta">
+    <strong>⚠️ Vigente desde agosto 2024:</strong> Toda empresa con 1 o más trabajadores debe cumplir con la Ley 21.643.
+  </div>
+  <p>La Ley Karin establece que los empleadores deben:</p>
+  <ul>
+    <li>Contar con un <strong>Protocolo de Prevención</strong> contra el acoso laboral, sexual y la violencia en el trabajo.</li>
+    <li>Implementar medidas de resguardo durante la investigación.</li>
+    <li>Realizar investigaciones en un plazo máximo de <strong>30 días hábiles</strong>.</li>
+    <li>Designar un canal de denuncia accesible y confidencial.</li>
+    <li>Capacitar a todos los trabajadores y supervisores.</li>
+  </ul>
+  <div class="plazo">
+    <strong>⏱ Plazo máximo de investigación: 30 días hábiles</strong>
+  </div>
+</div>
+
+<div class="card">
+  <h2>🛡️ Conductas que cubre la Ley Karin</h2>
+  <div class="conducta"><strong>Acoso Laboral (Mobbing):</strong> Conducta reiterada que afecta la dignidad del trabajador, su carrera o condiciones laborales.</div>
+  <div class="conducta"><strong>Acoso Sexual:</strong> Requerimiento de carácter sexual no consentido que amenaza o perjudica la situación laboral.</div>
+  <div class="conducta"><strong>Violencia en el trabajo:</strong> Acción o amenaza de clientes, usuarios o terceros hacia trabajadores.</div>
+</div>
+
+<div class="card">
+  <h2>🤖 Superprompt para crear Protocolo Ley Karin con IA</h2>
+  <div class="prompt-box" id="prompt">Actúa como experto legal en derecho laboral chileno especializado en la Ley 21.643 (Ley Karin).
+
+Necesito crear un PROTOCOLO DE PREVENCIÓN completo para una empresa de [rubro] con [N° trabajadores] trabajadores en Chile.
+
+El protocolo debe incluir:
+1. DECLARACIÓN DE COMPROMISO de la empresa.
+2. DEFINICIONES: acoso laboral, acoso sexual y violencia en el trabajo (según Ley 21.643).
+3. CANAL DE DENUNCIA: cómo y dónde denunciar (correo, WhatsApp, formulario).
+4. PROCESO DE INVESTIGACIÓN: pasos, plazos (30 días hábiles) y responsable.
+5. MEDIDAS DE RESGUARDO durante la investigación.
+6. SANCIONES aplicables.
+7. COMPROMISOS DE CAPACITACIÓN.
+8. Formulario de denuncia (campos básicos).
+
+Tono: lenguaje claro, directo. Incluye las referencias a la Ley 21.643 donde corresponda.
+Formato: estructura en secciones numeradas, listo para copiar y adaptar.</div>
+  <button class="copy-btn" onclick="navigator.clipboard.writeText(document.getElementById('prompt').innerText)">Copiar prompt</button>
+</div>
+
+<div class="card">
+  <h2>✅ Checklist final del Día 6</h2>
+  <ul class="checklist">
+    <li>El protocolo incluye las tres conductas cubiertas por la Ley Karin.</li>
+    <li>Existe un canal de denuncia accesible y confidencial.</li>
+    <li>El proceso de investigación respeta el plazo de 30 días hábiles.</li>
+    <li>El protocolo fue comunicado a todos los trabajadores.</li>
+    <li>Se programó la capacitación obligatoria sobre Ley Karin.</li>
+  </ul>
+</div>
+
+<nav class="nav">
+  <a href="reto-doc-sst-dia1.html">Día 1</a>
+  <a href="reto-doc-sst-dia2.html">Día 2</a>
+  <a href="reto-doc-sst-dia3.html">Día 3</a>
+  <a href="reto-doc-sst-dia4.html">Día 4</a>
+  <a href="reto-doc-sst-dia5.html">Día 5</a>
+  <a href="reto-doc-sst-dia6.html" class="active">Día 6</a>
+  <a href="reto-doc-sst-dia7.html">Día 7</a>
+</nav>
+</body>
+</html>
