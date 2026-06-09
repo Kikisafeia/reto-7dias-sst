@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Día 5 – Investigación de Accidentes con IA</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f5f5; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #e74c3c; padding-bottom: 10px; }
+  h2 { color: #1a5276; margin-top: 30px; }
+  .card { background: white; border-radius: 8px; padding: 20px; margin: 20px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+  .badge { background: #e74c3c; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85em; font-weight: bold; }
+  .objetivo { background: #eaf4fb; border-left: 4px solid #2980b9; padding: 15px; margin: 15px 0; border-radius: 4px; }
+  ul, ol { padding-left: 20px; }
+  li { margin: 8px 0; }
+  .prompt-box { background: #1a1a2e; color: #e0e0e0; padding: 20px; border-radius: 8px; font-family: monospace; font-size: 0.9em; white-space: pre-wrap; line-height: 1.6; }
+  .copy-btn { background: #e74c3c; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-top: 10px; font-size: 0.9em; }
+  .copy-btn:hover { background: #c0392b; }
+  .checklist { list-style: none; padding: 0; }
+  .checklist li::before { content: "☐ "; color: #27ae60; font-weight: bold; }
+  .metodo { background: #fdf2f8; border-left: 4px solid #e74c3c; padding: 15px; border-radius: 4px; margin: 10px 0; }
+  .paso { background: white; border: 1px solid #ddd; border-radius: 6px; padding: 12px; margin: 8px 0; }
+  .paso strong { color: #e74c3c; }
+  nav.nav { background: #1a5276; padding: 15px; border-radius: 8px; margin-top: 40px; display: flex; gap: 10px; flex-wrap: wrap; }
+  nav.nav a { color: white; text-decoration: none; padding: 6px 14px; border-radius: 4px; background: rgba(255,255,255,0.15); font-size: 0.9em; }
+  nav.nav a.active { background: #e74c3c; }
+  nav.nav a:hover { background: rgba(255,255,255,0.3); }
+</style>
+</head>
+<body>
+<div class="card">
+  <span class="badge">DÍA 5 DE 7</span>
+  <h1>🔍 Investigación de Accidentes con IA</h1>
+  <div class="objetivo">
+    <strong>Objetivo del día:</strong> Aprender a usar IA para investigar accidentes e incidentes laborales aplicando metodologías como los 5 Por Qué y el Árbol de Causas, generando informes completos en minutos.
+  </div>
+</div>
+
+<div class="card">
+  <h2>📚 Métodos de Investigación que la IA puede aplicar</h2>
+  <div class="metodo">
+    <strong>🔹 Método de los 5 Por Qué:</strong>
+    <p>Consiste en preguntar sucesivamente "¿por qué?" hasta encontrar la causa raíz. Simple y efectivo para incidentes de baja complejidad.</p>
+  </div>
+  <div class="metodo">
+    <strong>🔹 Árbol de Causas (Diagrama Causa-Efecto):</strong>
+    <p>Mapea causas inmediatas, básicas y factores del sistema. Ideal para accidentes graves o con múltiples factores involucrados.</p>
+  </div>
+  <div class="metodo">
+    <strong>🔹 Método SCAT (Systematic Cause Analysis Technique):</strong>
+    <p>Clasifica causas en inmediatas, básicas y falta de control. Muy usado en industria minera y construcción en Chile.</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>🛠️ Pasos para investigar un accidente con IA</h2>
+  <div class="paso"><strong>Paso 1:</strong> Recopila los hechos: fecha, hora, lugar, personas involucradas, actividad que se realizaba.</div>
+  <div class="paso"><strong>Paso 2:</strong> Describe el evento en lenguaje simple a la IA (qué pasó, cómo pasó, quién estuvo involucrado).</div>
+  <div class="paso"><strong>Paso 3:</strong> Solicita a la IA que aplique el método de los 5 Por Qué al evento descrito.</div>
+  <div class="paso"><strong>Paso 4:</strong> Pide que identifique causas inmediatas, básicas y sistematize las lecciones aprendidas.</div>
+  <div class="paso"><strong>Paso 5:</strong> Solicita un plan de acción correctiva con responsables y plazos.</div>
+  <div class="paso"><strong>Paso 6:</strong> Genera el informe final con la estructura requerida por la SUSESO/mutual.</div>
+  <div class="paso"><strong>Paso 7:</strong> Revisa y valida con el equipo antes de firmar y archivar.</div>
+</div>
+
+<div class="card">
+  <h2>🤖 Superprompt para investigar accidentes con IA</h2>
+  <div class="prompt-box" id="prompt">Actúa como experto en investigación de accidentes laborales con experiencia en Chile (DS 40, mutuales de seguridad).
+
+Tengo el siguiente accidente/incidente para investigar:
+- Empresa/rubro: [rubro]
+- Fecha y hora: [fecha]
+- Lugar: [lugar]
+- Trabajador: [cargo/descripción]
+- Descripción del evento: [qué pasó exactamente]
+- Lesiones/daños: [tipo de lesión o daño]
+
+Por favor:
+1. Aplica el método de los 5 Por Qué para identificar la causa raíz.
+2. Clasifica las causas en: inmediatas, básicas y sistematice.
+3. Identifica los factores del sistema que fallaron (EPP, capacitación, procedimientos, supervision).
+4. Propone un plan de acción correctiva con: RESPONSABLE | FECHA COMPROMISO | ACCIÓN.
+5. Redacta el resumen ejecutivo del informe (máx. 10 líneas).
+
+Formato: usa tablas donde sea posible.</div>
+  <button class="copy-btn" onclick="navigator.clipboard.writeText(document.getElementById('prompt').innerText)">Copiar prompt</button>
+</div>
+
+<div class="card">
+  <h2>✅ Checklist final del Día 5</h2>
+  <ul class="checklist">
+    <li>Se identificó la causa raíz (no solo la causa inmediata).</li>
+    <li>El plan de acción tiene responsable, fecha y descripción de la acción.</li>
+    <li>El informe es comprensible para gerencia y trabajadores.</li>
+    <li>Se registraron las lecciones aprendidas para prevenir recurrencia.</li>
+    <li>El informe se archivó y compartió con el CPHS según DS 40.</li>
+  </ul>
+</div>
+
+<nav class="nav">
+  <a href="reto-doc-sst-dia1.html">Día 1</a>
+  <a href="reto-doc-sst-dia2.html">Día 2</a>
+  <a href="reto-doc-sst-dia3.html">Día 3</a>
+  <a href="reto-doc-sst-dia4.html">Día 4</a>
+  <a href="reto-doc-sst-dia5.html" class="active">Día 5</a>
+  <a href="reto-doc-sst-dia6.html">Día 6</a>
+  <a href="reto-doc-sst-dia7.html">Día 7</a>
+</nav>
+</body>
+</html>
