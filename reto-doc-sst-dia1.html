@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Día 1 – Inducción SST con IA | SAFEIA</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:#f5f6fa;color:#1a1a2e;line-height:1.7}
+.header{background:linear-gradient(135deg,#1a1a2e,#16213e);color:#fff;padding:24px 32px}
+.badge{background:#e63946;color:#fff;border-radius:20px;padding:4px 14px;font-size:12px;font-weight:700;display:inline-block;margin-bottom:10px}
+h1{font-size:2rem;margin-bottom:8px}
+.subtitle{color:#adb5bd;font-size:1rem}
+.progress{height:6px;background:#e9ecef;border-radius:3px;margin-top:16px}
+.progress-bar{height:6px;width:14.28%;background:#e63946;border-radius:3px}
+.container{max-width:860px;margin:32px auto;padding:0 20px}
+.card{background:#fff;border-radius:12px;padding:28px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,.07)}
+h2{font-size:1.2rem;margin-bottom:16px;color:#1a1a2e}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.tag{background:#fff3cd;color:#856404;border-radius:20px;padding:3px 12px;font-size:12px;font-weight:600}
+.prompt-box{background:#1e1e2e;color:#a9b1d6;border-radius:10px;padding:20px;font-family:monospace;font-size:13px;white-space:pre-wrap;word-break:break-word;position:relative}
+.copy-btn{position:absolute;top:12px;right:12px;background:#e63946;color:#fff;border:none;border-radius:6px;padding:6px 12px;font-size:12px;cursor:pointer}
+table{width:100%;border-collapse:collapse;margin-top:12px}
+td,th{border:1px solid #dee2e6;padding:10px 14px;text-align:left}
+th{background:#f1f3f5;font-weight:600}
+.checklist li{list-style:none;padding:8px 0;border-bottom:1px solid #f1f3f5}
+.checklist li::before{content:'☐ ';font-size:1.1rem;color:#6c757d}
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:32px;padding:20px 0;border-top:1px solid #dee2e6}
+.nav a{background:#1a1a2e;color:#fff;text-decoration:none;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600}
+.nav a:hover,.nav a.active{background:#e63946}
+footer{text-align:center;color:#6c757d;font-size:12px;padding:24px;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="header">
+<div class="badge">Día 1 de 7 · Documentos SST con IA · SAFEIA</div>
+<h1>Inducción SST con IA</h1>
+<p class="subtitle">Hoy creas la pauta y el guion de inducción básica de Seguridad y Salud en el Trabajo, usando IA para acelerar el borrador sin perder criterio profesional.</p>
+<div class="progress"><div class="progress-bar"></div></div>
+</div>
+<div class="container">
+<div class="card">
+<h2>📌 1. Contexto rápido</h2>
+<p>La inducción SST es el primer contacto formal de la persona trabajadora con los riesgos, controles y reglas básicas del lugar de trabajo. Debe ser breve, clara y enfocada en los riesgos críticos.</p>
+<br>
+<p>Usar IA aquí sirve para:</p>
+<ul style="margin:12px 0 12px 20px">
+<li>Pasar de una lista de ideas sueltas a un guion ordenado.</li>
+<li>Adaptar el lenguaje al rubro y al tipo de trabajador (operativo, administrativo, etc.).</li>
+<li>Generar versiones distintas para empresas o faenas diferentes en minutos.</li>
+</ul>
+<p>Tu rol como profesional SST: <strong>revisar que los riesgos y controles sean reales</strong> para esa empresa y normativa local.</p>
+</div>
+<div class="card">
+<h2>⚠️ 2. Errores típicos de principiantes</h2>
+<div class="tags"><span class="tag">Demasiado larga</span><span class="tag">Lenguaje legalista</span><span class="tag">Sin riesgos concretos</span><span class="tag">Sin evidencia</span><span class="tag">Misma para todos</span></div>
+<ul style="margin-left:20px">
+<li>Convertir la inducción en una &quot;clase magistral de 1 hora&quot; en vez de 15–20 min bien enfocados.</li>
+<li>Hablar solo de leyes y artículos, sin ejemplos ni riesgos concretos del puesto.</li>
+<li>No dejar evidencia (lista de asistencia, fecha, quién hizo la inducción, firma).</li>
+<li>Usar el mismo guion para todos los rubros y cargos sin adaptar los riesgos críticos.</li>
+<li>Copiar una inducción genérica de internet sin ajustarla al lugar de trabajo real.</li>
+</ul>
+</div>
+<div class="card">
+<h2>📄 3. Plantilla del documento</h2>
+<h3 style="margin-bottom:10px;font-size:1rem">Ficha de inducción (estructura mínima)</h3>
+<table>
+<tr><th>Campo</th><th>Descripción</th></tr>
+<tr><td>Empresa / Centro de trabajo</td><td>Nombre y dirección</td></tr>
+<tr><td>Fecha y hora</td><td>Cuándo se realizó</td></tr>
+<tr><td>Relator</td><td>Nombre y cargo</td></tr>
+<tr><td>Trabajador</td><td>Nombre, cargo, área, jornada</td></tr>
+<tr><td>Temas tratados</td><td>Lista de temas con checkbox (✓ cuando se abordó)</td></tr>
+<tr><td>Duración</td><td>Tiempo real de la inducción</td></tr>
+<tr><td>Firmas</td><td>Relator y trabajador</td></tr>
+</table>
+<h3 style="margin:16px 0 10px;font-size:1rem">Guion de inducción (secciones mínimas)</h3>
+<ul style="margin-left:20px">
+<li><strong>Bienvenida y propósito</strong> (2–3 frases)</li>
+<li><strong>Política SST</strong> explicada en lenguaje simple</li>
+<li><strong>Riesgos principales</strong> del área + ejemplos de accidentes típicos</li>
+<li><strong>Medidas de control y EPP</strong> obligatorio</li>
+<li><strong>Qué hacer</strong> ante accidente, incidente o emergencia</li>
+<li><strong>Cierre y preguntas</strong></li>
+</ul>
+</div>
+<div class="card">
+<h2>🤖 4. Superprompt IA del Día 1</h2>
+<p style="margin-bottom:12px">COPIA ESTE PROMPT EN PERPLEXITY, GEMINI, CLAUDE O CHATGPT Y REEMPLAZA LOS CAMPOS ENTRE [ ].</p>
+<div class="prompt-box" id="prompt">
+Eres un experto en Seguridad y Salud en el Trabajo (SST) que redacta inducciones claras y breves para trabajadores que recién ingresan. Quiero que me ayudes a crear DOS cosas:
+1) La pauta/ficha de inducción (estructura de temas con checkbox).
+2) El guion que usaré para explicar los temas en 15–20 minutos.
+
+Contexto:
+- Rubro: [indica rubro: construcción / retail / logística / oficina / otro]
+- Tipo de centro: [obra / bodega / oficina / planta / terreno]
+- Cargo del trabajador: [ej: bodeguero / administrativo / operador]
+- Riesgos principales que conozco: [lista de 4–8 riesgos]
+
+Instrucciones:
+- Usa lenguaje simple, sin tecnicismos ni artículos de ley.
+- Prioriza los riesgos críticos del cargo y del lugar.
+- Incluye ejemplos concretos de situaciones de riesgo típicas.
+- Duración objetivo: 15–20 minutos.
+</div>
+<button class="copy-btn" onclick="navigator.clipboard.writeText(document.getElementById('prompt').innerText)">Copiar prompt</button>
+</div>
+<div class="card">
+<h2>✅ 5. Checklist final del Día 1</h2>
+<p style="margin-bottom:12px">Antes de pasar al siguiente día, verifica que puedes marcar todo esto:</p>
+<ul class="checklist">
+<li>Tengo una ficha de inducción con temas mínimos y espacio para firmas.</li>
+<li>Tengo un guion de 15–20 minutos adaptado a un cargo y rubro concretos.</li>
+<li>El lenguaje es simple y entendible para cualquier trabajador.</li>
+<li>Los riesgos mencionados son realmente los más críticos del puesto.</li>
+<li>Guardé el documento en una carpeta clara (ej. 01_Induccion_SST).</li>
+</ul>
+</div>
+<nav class="nav">
+<a href="reto-doc-sst-dia1.html" class="active">Día 1</a>
+<a href="reto-doc-sst-dia2.html">Día 2</a>
+<a href="reto-doc-sst-dia3.html">Día 3</a>
+<a href="reto-doc-sst-dia4.html">Día 4</a>
+<a href="reto-doc-sst-dia5.html">Día 5</a>
+<a href="reto-doc-sst-dia6.html">Día 6</a>
+<a href="reto-doc-sst-dia7.html">Día 7</a>
+</nav>
+</div>
+<footer>Reto 7 Días &ldquo;Documentos SST con IA&rdquo; &middot; SAFEIA &middot; kikisafeia</footer>
+</body>
+</html>
