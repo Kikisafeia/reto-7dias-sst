@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Día 4 – Dashboard SST Automatizado con IA</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f5f5; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #f39c12; padding-bottom: 10px; }
+  h2 { color: #1a5276; margin-top: 30px; }
+  .card { background: white; border-radius: 8px; padding: 20px; margin: 20px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+  .badge { background: #8e44ad; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85em; font-weight: bold; }
+  .objetivo { background: #eaf4fb; border-left: 4px solid #2980b9; padding: 15px; margin: 15px 0; border-radius: 4px; }
+  ul, ol { padding-left: 20px; }
+  li { margin: 8px 0; }
+  .prompt-box { background: #1a1a2e; color: #e0e0e0; padding: 20px; border-radius: 8px; font-family: monospace; font-size: 0.9em; white-space: pre-wrap; line-height: 1.6; }
+  .copy-btn { background: #8e44ad; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-top: 10px; font-size: 0.9em; }
+  .copy-btn:hover { background: #7d3c98; }
+  .checklist { list-style: none; padding: 0; }
+  .checklist li::before { content: "☐ "; color: #27ae60; font-weight: bold; }
+  .kpi-box { background: #f5eef8; border-left: 4px solid #8e44ad; padding: 15px; border-radius: 4px; margin: 10px 0; }
+  .paso { background: white; border: 1px solid #ddd; border-radius: 6px; padding: 12px; margin: 8px 0; }
+  .paso strong { color: #8e44ad; }
+  nav.nav { background: #1a5276; padding: 15px; border-radius: 8px; margin-top: 40px; display: flex; gap: 10px; flex-wrap: wrap; }
+  nav.nav a { color: white; text-decoration: none; padding: 6px 14px; border-radius: 4px; background: rgba(255,255,255,0.15); font-size: 0.9em; }
+  nav.nav a.active { background: #8e44ad; }
+  nav.nav a:hover { background: rgba(255,255,255,0.3); }
+</style>
+</head>
+<body>
+<div class="card">
+  <span class="badge">DÍA 4 DE 7</span>
+  <h1>📊 Dashboard SST Automatizado con IA</h1>
+  <div class="objetivo">
+    <strong>Objetivo del día:</strong> Crear un dashboard de indicadores SST usando IA + Excel/Google Sheets que se actualice con mínima intervención manual, permitiendo tomar decisiones rápidas y basadas en datos.
+  </div>
+</div>
+
+<div class="card">
+  <h2>📊 KPIs esenciales del Dashboard SST</h2>
+  <div class="kpi-box">
+    <strong>Indicadores reactivos (lo que ya pasó):</strong>
+    <ul>
+      <li>Número de accidentes (con y sin tiempo perdido)</li>
+      <li>Tasa de accidentabilidad (TA)</li>
+      <li>Tasa de frecuencia (TF) y tasa de gravedad (TG)</li>
+      <li>Días perdidos por accidente</li>
+    </ul>
+  </div>
+  <div class="kpi-box">
+    <strong>Indicadores proactivos (lo que puedes controlar):</strong>
+    <ul>
+      <li>Inspecciones realizadas vs. programadas</li>
+      <li>Observaciones de seguridad cerradas</li>
+      <li>Capacitaciones completadas</li>
+      <li>Equipos de protección personal (EPP) entregados</li>
+      <li>Investigaciones de incidentes cerradas</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <h2>🛠️ Pasos para construir el Dashboard con IA</h2>
+  <div class="paso"><strong>Paso 1:</strong> Define los KPIs que necesitas medir en tu empresa/rubro.</div>
+  <div class="paso"><strong>Paso 2:</strong> Usa IA para generar la estructura de la hoja de cálculo con fórmulas automáticas.</div>
+  <div class="paso"><strong>Paso 3:</strong> Solicita a la IA que cree gráficos de semáforo (rojo/amarillo/verde) por indicador.</div>
+  <div class="paso"><strong>Paso 4:</strong> Automatiza el cálculo de tasas con fórmulas: TA = (N° accidentes / N° trabajadores) x 100.</div>
+  <div class="paso"><strong>Paso 5:</strong> Agrega una pestaña de resumen ejecutivo que se actualice sola.</div>
+  <div class="paso"><strong>Paso 6:</strong> Pide a la IA que genere un prompt para el análisis mensual automático.</div>
+  <div class="paso"><strong>Paso 7:</strong> Exporta como PDF para reportes a gerencia.</div>
+</div>
+
+<div class="card">
+  <h2>🤖 Superprompt para crear el Dashboard SST con IA</h2>
+  <div class="prompt-box" id="prompt">Actúa como un experto en SST y análisis de datos. Necesito crear un Dashboard SST para una empresa de [rubro] con [N°] trabajadores.
+
+Crea una estructura completa en Google Sheets / Excel que incluya:
+1. Hoja de DATOS BASE: donde ingreso mensualmente accidentes, inspecciones, capacitaciones.
+2. Hoja de KPIs: con fórmulas automáticas para calcular:
+   - Tasa de accidentabilidad = (accidentes / trabajadores) x 100
+   - Tasa de frecuencia = (accidentes / horas trabajadas) x 1.000.000
+   - % cumplimiento de inspecciones
+   - % capacitaciones completadas
+3. Hoja DASHBOARD visual con:
+   - Semáforos (rojo/amarillo/verde) por KPI
+   - Gráfico de tendencia mensual
+   - Resumen ejecutivo de 5 líneas para gerencia
+4. Fórmulas listas para copiar.
+
+Formato: dame primero la estructura de columnas, luego las fórmulas y finalmente el resumen ejecutivo del mes.</div>
+  <button class="copy-btn" onclick="navigator.clipboard.writeText(document.getElementById('prompt').innerText)">Copiar prompt</button>
+</div>
+
+<div class="card">
+  <h2>✅ Checklist final del Día 4</h2>
+  <ul class="checklist">
+    <li>El dashboard incluye indicadores reactivos Y proactivos.</li>
+    <li>Las fórmulas se calculan automáticamente al ingresar datos.</li>
+    <li>Existe un semáforo visual por cada KPI clave.</li>
+    <li>El resumen ejecutivo se puede generar con IA en 2 minutos.</li>
+    <li>El archivo está listo para compartir con gerencia.</li>
+  </ul>
+</div>
+
+<nav class="nav">
+  <a href="reto-doc-sst-dia1.html">Día 1</a>
+  <a href="reto-doc-sst-dia2.html">Día 2</a>
+  <a href="reto-doc-sst-dia3.html">Día 3</a>
+  <a href="reto-doc-sst-dia4.html" class="active">Día 4</a>
+  <a href="reto-doc-sst-dia5.html">Día 5</a>
+  <a href="reto-doc-sst-dia6.html">Día 6</a>
+  <a href="reto-doc-sst-dia7.html">Día 7</a>
+</nav>
+</body>
+</html>
