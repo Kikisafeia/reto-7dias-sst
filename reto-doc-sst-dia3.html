@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Día 3 – Instructivo Breve para Supervisores con IA</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f5f5; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #f39c12; padding-bottom: 10px; }
+  h2 { color: #1a5276; margin-top: 30px; }
+  .card { background: white; border-radius: 8px; padding: 20px; margin: 20px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+  .badge { background: #f39c12; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85em; font-weight: bold; }
+  .objetivo { background: #eaf4fb; border-left: 4px solid #2980b9; padding: 15px; margin: 15px 0; border-radius: 4px; }
+  ul, ol { padding-left: 20px; }
+  li { margin: 8px 0; }
+  .prompt-box { background: #1a1a2e; color: #e0e0e0; padding: 20px; border-radius: 8px; font-family: monospace; font-size: 0.9em; white-space: pre-wrap; line-height: 1.6; }
+  .copy-btn { background: #f39c12; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-top: 10px; font-size: 0.9em; }
+  .copy-btn:hover { background: #e67e22; }
+  .checklist { list-style: none; padding: 0; }
+  .checklist li::before { content: "☐ "; color: #27ae60; font-weight: bold; }
+  .error-box { background: #fdf2f8; border-left: 4px solid #c0392b; padding: 15px; border-radius: 4px; margin: 10px 0; }
+  .estructura { background: #eafaf1; border-left: 4px solid #27ae60; padding: 15px; border-radius: 4px; margin: 10px 0; }
+  nav.nav { background: #1a5276; padding: 15px; border-radius: 8px; margin-top: 40px; display: flex; gap: 10px; flex-wrap: wrap; }
+  nav.nav a { color: white; text-decoration: none; padding: 6px 14px; border-radius: 4px; background: rgba(255,255,255,0.15); font-size: 0.9em; }
+  nav.nav a.active { background: #f39c12; }
+  nav.nav a:hover { background: rgba(255,255,255,0.3); }
+</style>
+</head>
+<body>
+<div class="card">
+  <span class="badge">DÍA 3 DE 7</span>
+  <h1>📋 Instructivo Breve para Supervisores con IA</h1>
+  <div class="objetivo">
+    <strong>Objetivo del día:</strong> Aprender a crear instructivos de 1 página para supervisores de terreno usando IA, con lenguaje simple, directo y accionable.
+  </div>
+</div>
+
+<div class="card">
+  <h2>🎯 ¿Qué es un Instructivo Breve?</h2>
+  <p>Es una herramienta de recordatorio práctico para mandos medios, diseñada para complementar los procedimientos técnicos con lenguaje directo y aplicable en el terreno.</p>
+  <div class="error-box">
+    <strong>❌ Errores típicos:</strong>
+    <ul>
+      <li>Exceso de extensión (3–4 páginas)</li>
+      <li>Ausencia de requisitos de evidencia (foto, firmas, notas)</li>
+      <li>Uso de lenguaje de auditoría en lugar de lenguaje de terreno</li>
+      <li>Falta de definición en la frecuencia y momento de aplicación</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <h2>🏗️ Estructura del Instructivo (1 página)</h2>
+  <div class="estructura">
+    <ol>
+      <li><strong>TÍTULO:</strong> "Cómo…" + la actividad concreta</li>
+      <li><strong>OBJETIVO:</strong> 2–3 líneas sobre la utilidad de la actividad</li>
+      <li><strong>CUÁNDO SE USA:</strong> Frecuencia, momento del turno, duración</li>
+      <li><strong>PASOS PARA APLICAR:</strong> Máximo 7 acciones concretas para el supervisor</li>
+      <li><strong>EVIDENCIA MÍNIMA:</strong> Qué registrar y cómo hacerlo</li>
+      <li><strong>TIPS PRÁCTICOS:</strong> 3–5 recomendaciones clave</li>
+    </ol>
+  </div>
+</div>
+
+<div class="card">
+  <h2>🤖 Superprompt para crear Instructivos con IA</h2>
+  <div class="prompt-box" id="prompt">Actúa como un experto en SST que redacta instructivos breves y prácticos para supervisores de terreno. Quiero un INSTRUCTIVO DE 1 PÁGINA para supervisores de [rubro] sobre: [actividad] en un centro de tipo [centro de trabajo] con el objetivo de [objetivo].
+
+Instrucciones:
+- Dirige el texto AL SUPERVISOR.
+- Usa lenguaje simple y directo.
+- Sin leyes ni definiciones técnicas.
+- Estructura:
+  1) TÍTULO: "Cómo..." + la actividad
+  2) OBJETIVO (2–3 líneas concretas)
+  3) CUÁNDO SE USA (frecuencia, momento del turno, duración)
+  4) PASOS PARA APLICAR (máximo 7 pasos)
+  5) EVIDENCIA MÍNIMA
+  6) TIPS PRÁCTICOS (3–5 bullets)</div>
+  <button class="copy-btn" onclick="navigator.clipboard.writeText(document.getElementById('prompt').innerText)">Copiar prompt</button>
+</div>
+
+<div class="card">
+  <h2>✅ Checklist final del Día 3</h2>
+  <ul class="checklist">
+    <li>El instructivo cabe en 1 página máximo.</li>
+    <li>Está claramente dirigido al supervisor, no al trabajador.</li>
+    <li>Indica cuándo se usa (frecuencia y momento).</li>
+    <li>Define la evidencia mínima que debe quedar.</li>
+    <li>Los pasos son aplicables en la realidad del terreno.</li>
+  </ul>
+</div>
+
+<nav class="nav">
+  <a href="reto-doc-sst-dia1.html">Día 1</a>
+  <a href="reto-doc-sst-dia2.html">Día 2</a>
+  <a href="reto-doc-sst-dia3.html" class="active">Día 3</a>
+  <a href="reto-doc-sst-dia4.html">Día 4</a>
+  <a href="reto-doc-sst-dia5.html">Día 5</a>
+  <a href="reto-doc-sst-dia6.html">Día 6</a>
+  <a href="reto-doc-sst-dia7.html">Día 7</a>
+</nav>
+</body>
+</html>
